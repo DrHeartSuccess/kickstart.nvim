@@ -39,3 +39,5 @@ vim.keymap.set('n', '<leader>tt', ':split | terminal<CR>', { desc = 'Terminal ho
 vim.keymap.set('i', 'jj', '<Esc>', { desc = 'Escape insert mode with jj' })
 
 vim.keymap.set('n', '<C-p>', '<cmd>Telescope find_files<cr>', { desc = 'Find files' })
+
+vim.keymap.set({ 'n', 'i', 'v' }, '<C-s>', '<cmd>w<cr>', { desc = 'Save file' })
