@@ -3,41 +3,7 @@ vim.g.maplocalleader = ','
 
 vim.g.have_nerd_font = true
 
-vim.opt.number = true
-vim.opt.relativenumber = true
-
-vim.opt.mouse = 'a'
-vim.opt.showmode = false
-
-vim.schedule(function()
-  vim.opt.clipboard = 'unnamedplus'
-end)
-
-vim.opt.breakindent = true
-
-vim.opt.undofile = true
-
-vim.opt.ignorecase = true
-vim.opt.smartcase = true
-
-vim.opt.updatetime = 250
-vim.opt.timeoutlen = 300
-
-vim.opt.splitright = true
-vim.opt.splitbelow = true
-
--- Sets how neovim will display certain whitespace characters in the editor.
-vim.opt.list = true
-vim.opt.listchars = { tab = '» ', trail = '·', nbsp = '␣' }
-
--- Preview substitutions live, as you type!
-vim.opt.inccommand = 'split'
-
-vim.opt.signcolumn = 'yes'
-vim.opt.cursorline = true
-vim.opt.scrolloff = 10
-
-vim.opt.confirm = true
+require 'options'
 
 -- [[ Basic Keymaps ]]
 --  See `:help vim.keymap.set()`
@@ -77,6 +43,15 @@ vim.keymap.set('n', '<C-k>', '<C-w><C-k>', { desc = 'Move focus to the upper win
 -- vim.keymap.set("n", "<C-S-l>", "<C-w>L", { desc = "Move window to the right" })
 -- vim.keymap.set("n", "<C-S-j>", "<C-w>J", { desc = "Move window to the lower" })
 -- vim.keymap.set("n", "<C-S-k>", "<C-w>K", { desc = "Move window to the upper" })
+
+-- Resize splits with Alt + Arrow keys
+vim.keymap.set('n', '<A-k>', ':resize -2<CR>', { desc = 'Resize split up' })
+vim.keymap.set('n', '<A-j>', ':resize +2<CR>', { desc = 'Resize split down' })
+vim.keymap.set('n', '<A-h>', ':vertical resize -2<CR>', { desc = 'Resize split left' })
+vim.keymap.set('n', '<A-l>', ':vertical resize +2<CR>', { desc = 'Resize split right' })
+
+-- Open terminal in a horizontal split
+vim.keymap.set('n', '<leader>tt', ':split | terminal<CR>', { desc = 'Terminal horizontal' })
 
 -- [[ Basic Autocommands ]]
 --  See `:help lua-guide-autocommands`
@@ -764,7 +739,7 @@ require('lazy').setup({
       -- Load the colorscheme here.
       -- Like many other themes, this one has different styles, and you could load
       -- any other, such as 'tokyonight-storm', 'tokyonight-moon', or 'tokyonight-day'.
-      vim.cmd.colorscheme 'tokyonight-night'
+      vim.cmd.colorscheme 'tokyonight-storm'
     end,
   },
 
@@ -847,7 +822,7 @@ require('lazy').setup({
   -- require 'kickstart.plugins.indent_line',
   -- require 'kickstart.plugins.lint',
   -- require 'kickstart.plugins.autopairs',
-  -- require 'kickstart.plugins.neo-tree',
+  require 'kickstart.plugins.neo-tree',
   -- require 'kickstart.plugins.gitsigns', -- adds gitsigns recommend keymaps
 
   -- NOTE: The import below can automatically add your own plugins, configuration, etc from `lua/custom/plugins/*.lua`
