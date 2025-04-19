@@ -34,3 +34,6 @@ vim.keymap.set('n', '<A-l>', ':vertical resize +2<CR>', { desc = 'Resize split r
 
 -- Open terminal in a horizontal split
 vim.keymap.set('n', '<leader>tt', ':split | terminal<CR>', { desc = 'Terminal horizontal' })
+
+-- Press 'jj' quickly in insert mode to escape
+vim.keymap.set('i', 'jj', '<Esc>', { desc = 'Escape insert mode with jj' })

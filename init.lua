@@ -4,6 +4,7 @@ vim.g.maplocalleader = ','
 vim.g.have_nerd_font = true
 
 require 'options'
+require 'keymaps'
 
 -- [[ Basic Autocommands ]]
 --  See `:help lua-guide-autocommands`
