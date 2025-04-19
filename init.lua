@@ -6,6 +6,7 @@ vim.g.have_nerd_font = true
 require 'options'
 require 'keymaps'
 require 'autocommands'
+require 'lazy-bootstrap'
 
 -- [[ Configure and install plugins ]]
 
