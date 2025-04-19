@@ -1,3 +1,5 @@
+-- [[ Basic Keymaps ]]
+
 vim.opt.number = true
 vim.opt.relativenumber = true
 
