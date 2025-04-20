@@ -8,7 +8,7 @@ vim.keymap.set('n', '<Esc>', '<cmd>nohlsearch<CR>')
 vim.keymap.set('n', '<leader>q', vim.diagnostic.setloclist, { desc = 'Open diagnostic [Q]uickfix list' })
 
 -- Exit terminal mode in the builtin terminal with a shortcut that is a bit easier
-vim.keymap.set('t', '<Esc><Esc>', '<C-\\><C-n>', { desc = 'Exit terminal mode' })
+vim.keymap.set('t', '<Esc><Esc>', '<C-\\><C-n><cmd>q<CR>', { desc = 'Exit terminal mode' })
 
 vim.keymap.set('n', '<left>', '<cmd>echo "Use h to move!!"<CR>')
 vim.keymap.set('n', '<right>', '<cmd>echo "Use l to move!!"<CR>')
@@ -32,11 +32,7 @@ vim.keymap.set('n', '<A-j>', ':resize +2<CR>', { desc = 'Resize split down' })
 vim.keymap.set('n', '<A-h>', ':vertical resize -2<CR>', { desc = 'Resize split left' })
 vim.keymap.set('n', '<A-l>', ':vertical resize +2<CR>', { desc = 'Resize split right' })
 
--- Open terminal in a horizontal split
-vim.keymap.set('n', '<leader>tt', ':split | terminal<CR>', { desc = 'Terminal horizontal' })
-
--- Press 'jj' quickly in insert mode to escape
-vim.keymap.set('i', 'jj', '<Esc>', { desc = 'Escape insert mode with jj' })
+vim.keymap.set('n', '<leader>tt', '<cmd>ToggleTerm<CR>', { desc = 'Toggle terminal' })
 
 vim.keymap.set('n', '<C-p>', '<cmd>Telescope find_files<cr>', { desc = 'Find files' })
 
