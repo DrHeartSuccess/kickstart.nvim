@@ -37,3 +37,5 @@ vim.keymap.set('n', '<leader>tt', '<cmd>ToggleTerm<CR>', { desc = 'Toggle termin
 vim.keymap.set('n', '<C-p>', '<cmd>Telescope find_files<cr>', { desc = 'Find files' })
 
 vim.keymap.set({ 'n', 'i', 'v' }, '<C-s>', '<cmd>w<cr>', { desc = 'Save file' })
+
+vim.keymap.set('n', '\\', '<cmd>Oil<Space>--float<CR>', { desc = 'Open Oil file explorer' })
