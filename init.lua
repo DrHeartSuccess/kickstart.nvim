@@ -27,6 +27,7 @@ require('lazy').setup({
   require 'custom.plugins.neotab',
   require 'custom.plugins.oil',
   require 'custom.plugins.toggleterm',
+  require 'custom.plugins.dashboard-nvim',
 }, {
   ui = {
     -- If you are using a Nerd Font: set icons to an empty table which will use the
