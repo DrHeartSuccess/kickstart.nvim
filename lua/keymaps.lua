@@ -22,17 +22,11 @@ vim.keymap.set('n', '<C-l>', '<C-w><C-l>', { desc = 'Move focus to the right win
 vim.keymap.set('n', '<C-j>', '<C-w><C-j>', { desc = 'Move focus to the lower window' })
 vim.keymap.set('n', '<C-k>', '<C-w><C-k>', { desc = 'Move focus to the upper window' })
 
-vim.keymap.set('n', '<A-k>', ':resize -2<CR>', { desc = 'Resize split up' })
-vim.keymap.set('n', '<A-j>', ':resize +2<CR>', { desc = 'Resize split down' })
-vim.keymap.set('n', '<A-h>', ':vertical resize -2<CR>', { desc = 'Resize split left' })
-vim.keymap.set('n', '<A-l>', ':vertical resize +2<CR>', { desc = 'Resize split right' })
+vim.keymap.set('n', '<A-j>', ':m .+1<CR>==', { desc = 'Move line down' })
+vim.keymap.set('n', '<A-k>', ':m .-2<CR>==', { desc = 'Move line up' })
 
 vim.keymap.set('n', '<leader>tt', '<cmd>ToggleTerm<CR>', { desc = 'Toggle terminal' })
-
 vim.keymap.set('n', '<C-p>', '<cmd>Telescope find_files<cr>', { desc = 'Find files' })
-
 vim.keymap.set({ 'n', 'i', 'v' }, '<C-s>', '<cmd>w<cr><Esc>', { desc = 'Save file' })
-
 vim.keymap.set('n', '<A-q>', ':close<CR>', { noremap = true, silent = true, desc = 'Close current window' })
-
 vim.keymap.set('n', '\\', '<cmd>Oil<Space>--float<CR>', { desc = 'Open Oil file explorer' })
