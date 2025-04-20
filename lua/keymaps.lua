@@ -32,3 +32,5 @@ vim.keymap.set('n', '<A-w>', ':close<CR>', { noremap = true, silent = true, desc
 
 vim.keymap.set({ 'n', 'x', 'o' }, 's', '<Plug>(leap-forward)')
 vim.keymap.set({ 'n', 'x', 'o' }, 'S', '<Plug>(leap-backward)')
+
+vim.keymap.set('n', '\\', '<cmd>Oil --float<CR>', { desc = 'Open Oil (float)' })
