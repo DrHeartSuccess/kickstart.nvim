@@ -21,17 +21,6 @@ return {
             require('telescope.themes').get_dropdown(),
           },
         },
-        defaults = {
-          mappings = {
-            i = {
-              ['<CR>'] = function(prompt_bufnr)
-                local selection = require('telescope.actions.state').get_selected_entry()
-                require('telescope.actions').close(prompt_bufnr)
-                vim.cmd('tabnew ' .. selection.path)
-              end,
-            },
-          },
-        },
       }
 
       pcall(require('telescope').load_extension, 'fzf')

@@ -5,7 +5,7 @@ return {
     ---@type oil.SetupOpts
     opts = { keymaps = {
       ['<C-p>'] = false,
-      ['<leader>p'] = 'actions.preview',
+      ['<A-p>'] = 'actions.preview',
     } },
 
     -- Optional dependencies
