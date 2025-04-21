@@ -30,13 +30,15 @@ return {
         lua = { 'stylua' },
         njk = { 'djlint_njk' },
         scss = { 'prettier' },
+        json = { 'prettier' },
+        markdown = { 'prettier' },
       },
       formatters = {
         djlint_njk = {
           command = 'djlint',
           args = {
+            '--reformat',
             '--profile=jinja',
-            'reformat',
             '--indent=2',
             '-',
           },
