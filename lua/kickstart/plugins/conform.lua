@@ -37,6 +37,7 @@ return {
           args = {
             '--profile=jinja',
             'reformat',
+            '--indent=2',
             '-',
           },
         },
