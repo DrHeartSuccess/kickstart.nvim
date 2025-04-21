@@ -28,21 +28,11 @@ return {
       end,
       formatters_by_ft = {
         lua = { 'stylua' },
-        njk = { 'djlint_njk' },
+        njk = { 'prettier' },
         scss = { 'prettier' },
         json = { 'prettier' },
         markdown = { 'prettier' },
-      },
-      formatters = {
-        djlint_njk = {
-          command = 'djlint',
-          args = {
-            '--reformat',
-            '--profile=jinja',
-            '--indent=2',
-            '-',
-          },
-        },
+        html = { 'prettier' },
       },
     },
   },
