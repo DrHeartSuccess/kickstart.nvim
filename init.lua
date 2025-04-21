@@ -33,6 +33,12 @@ require('lazy').setup({
     'mustache/vim-mustache-handlebars',
     ft = { 'njk', 'nunjucks' },
   },
+  {
+    'Acidic9/tailwind-sorter.nvim',
+    build = 'npm install',
+    config = true,
+    ft = { 'html', 'javascriptreact', 'typescriptreact', 'css', 'scss', 'njk' },
+  },
 }, {
   ui = {
     -- If you are using a Nerd Font: set icons to an empty table which will use the

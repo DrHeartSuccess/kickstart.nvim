@@ -196,7 +196,26 @@ return {
             'scss',
           },
         },
-
+        tailwindcss = {
+          filetypes = {
+            'html',
+            'css',
+            'scss',
+            'javascript',
+            'javascriptreact',
+            'typescriptreact',
+            'svelte',
+            'vue',
+            'php',
+            'markdown',
+            'templ', -- include what you use
+          },
+          init_options = {
+            userLanguages = {
+              njk = 'html', -- optional: treat Nunjucks like HTML
+            },
+          },
+        },
         lua_ls = {
           -- cmd = { ... },
           -- filetypes = { ... },
