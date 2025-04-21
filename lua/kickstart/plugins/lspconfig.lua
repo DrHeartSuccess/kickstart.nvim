@@ -188,6 +188,15 @@ return {
         -- ts_ls = {},
         --
 
+        html = {},
+        emmet_ls = {
+          filetypes = {
+            'html',
+            'css',
+            'scss',
+          },
+        },
+
         lua_ls = {
           -- cmd = { ... },
           -- filetypes = { ... },
